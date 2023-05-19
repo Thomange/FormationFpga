@@ -82,7 +82,7 @@ architecture Behavioral of tb_led_counter is
             -- end_counter toutes les 2 us (200 * 10 ns)
             -- end_led_counter toutes les 20 us (10 * 2ns)
              
-            wait for 70 us;
+            wait for 71.1 us;
             
             
             -- reset du compteur 
