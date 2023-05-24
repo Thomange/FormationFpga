@@ -41,8 +41,10 @@ entity led_command is
     Port ( clk      : in STD_LOGIC;
            resetn   : in STD_LOGIC;
            bouton_0 : in std_logic;
+           bouton_1 : in std_logic;
            led_r    : out STD_LOGIC;
-           led_g    : out std_logic
+           led_g    : out std_logic;
+           led_b    : out std_logic
            );
 end led_command;
 
@@ -65,12 +67,14 @@ architecture Behavioral of led_command is
     
     signal s_end_counter        : std_logic; 
     signal s_led_on             : std_logic;  
-    signal s_led_r              : std_logic;
-    signal s_led_g              : std_logic;
-    
+
+        
     signal s_bouton_0           : std_logic;
     signal s_bouton_previous    : std_logic;
-    signal cmd                  : std_logic;
+    signal update               : std_logic;
+    signal color_code           : std_logic_vector(1 downto 0);
+    signal color_code_mem       : std_logic_vector(1 downto 0);
+    signal couleur              : std_logic_vector(2 downto 0);
     
     
     begin
@@ -92,30 +96,67 @@ architecture Behavioral of led_command is
     
         if (resetn = '1') then
             current_state       <= idle;
---            s_bouton_previous   <= '0';
---            s_bouton_0          <= '0';
+            
+--            color_code          <= "00";
+             
+            s_bouton_previous   <= '0';
+            s_bouton_0          <= '0';
+            color_code_mem      <= "11";
             
         elsif(rising_edge(clk)) then
             current_state <= next_state;
             
             s_bouton_0 <= bouton_0;         -- synchronisation du bouton 0
             
-            s_bouton_previous <= s_bouton_0;  -- 
+            s_bouton_previous <= s_bouton_0;  -- mise à jour de l'état précédent
+            
+            
+            -- mémorisation de couleur en fonction du signal update
+            if(update = '1') then
+                color_code_mem <= color_code;
+             else
+                color_code_mem <= color_code_mem;
+            end if;
             
             
             
         end if;
     end process led;
-    
+       ----------------------------------------------------------------------- 
        -- commande de  led lors de l'appuie sur le bouton_0
-    led_g <= s_led_on when  cmd = '1'
-        else '0';
+       -----------------------------------------------------------------------
+--    led_g <= s_led_on when  cmd = '1'
+--        else '0';
         
-    led_r <= '0' when cmd = '1'
-        else s_led_on;
+--    led_r <= '0' when cmd = '1'
+--        else s_led_on;
         
+         ----------------------------------------------------------------------- 
+       -- commande de clignotement et choix des couleurs des led
+         -----------------------------------------------------------------------
+    with color_code_mem select
+        couleur <= "100" when "01",
+                    "010" when "10",
+                    "001" when "11",
+                    "000" when others;
+   
+                 
+     led_r <= (couleur(2) and s_led_on);  
+     led_g <= (couleur(1) and s_led_on);  
+     led_b <= (couleur(0) and s_led_on);  
+  
+
+    -- modification du code couleur par appuie du bouton_1
+    with bouton_1 select
+        color_code <= "10" when '1',
+                      "11" when others;
+         
+               
     -- détection rising edge/ front montant
-    cmd <= (not(s_bouton_previous) and s_bouton_0);    
+    update <= (not(s_bouton_previous) and s_bouton_0);    
+    
+    
+    
     
     
     ------------------------ fsm ------------------
