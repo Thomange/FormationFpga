@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_pll_tp5_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_pll_tp5" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="9775500fs"></ZoomStartTime>
+      <ZoomEndTime time="10045001fs"></ZoomEndTime>
+      <Cursor1Time time="10000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="111"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/tb_pll_tp5/s_clk" type="logic">
+      <obj_property name="ElementShortName">s_clk</obj_property>
+      <obj_property name="ObjectShortName">s_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_pll_tp5/simul/pll/clk_out1" type="logic">
+      <obj_property name="ElementShortName">clk_out1</obj_property>
+      <obj_property name="ObjectShortName">clk_out1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_pll_tp5/simul/pll/clk_out2" type="logic">
+      <obj_property name="ElementShortName">clk_out2</obj_property>
+      <obj_property name="ObjectShortName">clk_out2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_pll_tp5/s_led_0_r" type="logic">
+      <obj_property name="ElementShortName">s_led_0_r</obj_property>
+      <obj_property name="ObjectShortName">s_led_0_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_pll_tp5/s_led_0_g" type="logic">
+      <obj_property name="ElementShortName">s_led_0_g</obj_property>
+      <obj_property name="ObjectShortName">s_led_0_g</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_pll_tp5/s_led_0_b" type="logic">
+      <obj_property name="ElementShortName">s_led_0_b</obj_property>
+      <obj_property name="ObjectShortName">s_led_0_b</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_pll_tp5/s_led_1_r" type="logic">
+      <obj_property name="ElementShortName">s_led_1_r</obj_property>
+      <obj_property name="ObjectShortName">s_led_1_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_pll_tp5/s_led_1_g" type="logic">
+      <obj_property name="ElementShortName">s_led_1_g</obj_property>
+      <obj_property name="ObjectShortName">s_led_1_g</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_pll_tp5/s_led_1_b" type="logic">
+      <obj_property name="ElementShortName">s_led_1_b</obj_property>
+      <obj_property name="ObjectShortName">s_led_1_b</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_pll_tp5/simul/s_end_cycle_1" type="logic">
+      <obj_property name="ElementShortName">s_end_cycle_1</obj_property>
+      <obj_property name="ObjectShortName">s_end_cycle_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_pll_tp5/simul/led_driver_1/led_r" type="logic">
+      <obj_property name="ElementShortName">led_r</obj_property>
+      <obj_property name="ObjectShortName">led_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_pll_tp5/simul/s_end_count_10" type="logic">
+      <obj_property name="ElementShortName">s_end_count_10</obj_property>
+      <obj_property name="ObjectShortName">s_end_count_10</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_pll_tp5/simul/s_update" type="logic">
+      <obj_property name="ElementShortName">s_update</obj_property>
+      <obj_property name="ObjectShortName">s_update</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_pll_tp5/simul/s_update_stretch" type="logic">
+      <obj_property name="ElementShortName">s_update_stretch</obj_property>
+      <obj_property name="ObjectShortName">s_update_stretch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_pll_tp5/simul/s_color_code" type="array">
+      <obj_property name="ElementShortName">s_color_code[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_color_code[1:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+</wave_config>

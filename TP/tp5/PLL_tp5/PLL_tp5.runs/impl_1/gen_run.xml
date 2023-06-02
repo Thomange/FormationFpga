@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1685718646">
+  <File Type="BITSTR-BMM" Name="pll_tp5_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="pll_tp5_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="pll_tp5_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="pll_tp5_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="pll_tp5.tcl"/>
+  <File Type="OPT-TIMING" Name="pll_tp5_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="pll_tp5_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="pll_tp5_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="pll_tp5_reports.tcl"/>
+  <File Type="OPT-DRC" Name="pll_tp5_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="pll_tp5.hwdef"/>
+  <File Type="PWROPT-DCP" Name="pll_tp5_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="pll_tp5_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="pll_tp5_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="pll_tp5_placed.dcp"/>
+  <File Type="PLACE-IO" Name="pll_tp5_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="pll_tp5_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="pll_tp5_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="pll_tp5_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="pll_tp5_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="pll_tp5_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="pll_tp5_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="pll_tp5_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="pll_tp5_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="pll_tp5.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="pll_tp5_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="pll_tp5_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="pll_tp5_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="pll_tp5.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="pll_tp5_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="pll_tp5_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="pll_tp5_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="pll_tp5_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="pll_tp5_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="pll_tp5_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="pll_tp5_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="pll_tp5.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="pll_tp5_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="pll_tp5_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="pll_tp5_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="pll_tp5_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="pll_tp5_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="pll_tp5_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="pll_tp5_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="pll_tp5_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="pll_tp5_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="pll_tp5_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="pll_tp5_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="pll_tp5_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="pll_tp5_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="pll_tp5_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="pll_tp5_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="pll_tp5_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="pll_tp5_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="pll_tp5_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="pll_tp5_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="pll_tp5_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="pll_tp5_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="pll_tp5.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="pll_tp5_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="pll_tp5.rbt"/>
+  <File Type="BITSTR-NKY" Name="pll_tp5.nky"/>
+  <File Type="PDI-FILE" Name="pll_tp5.pdi"/>
+  <File Type="RCFI_FILE" Name="pll_tp5.rcfi"/>
+  <File Type="CFI_FILE" Name="pll_tp5.cfi"/>
+  <File Type="RNPI_FILE" Name="pll_tp5.rnpi"/>
+  <File Type="NPI_FILE" Name="pll_tp5.npi"/>
+  <File Type="RBD_FILE" Name="pll_tp5.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="pll_tp5.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="pll_tp5.sysdef"/>
+  <File Type="BG-BGN" Name="pll_tp5.bgn"/>
+  <File Type="BG-DRC" Name="pll_tp5.drc"/>
+  <File Type="RDI-RDI" Name="pll_tp5.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/clk_wiz_0/clk_wiz_0.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/counter.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/led_driver.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/tp5_PLL.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="pll_tp5"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/projet/Cora-Z7-10-Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../TP4_2/projet/Cora-Z7-10-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1685111854"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/projet/Cora-Z7-10-Master.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

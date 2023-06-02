@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Jun  2 17:09:18 2023
+# Process ID: 5116
+# Current directory: C:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/PLL_tp5.runs/synth_1
+# Command line: vivado.exe -log pll_tp5.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pll_tp5.tcl
+# Log file: C:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/PLL_tp5.runs/synth_1/pll_tp5.vds
+# Journal file: C:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/PLL_tp5.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source pll_tp5.tcl -notrace

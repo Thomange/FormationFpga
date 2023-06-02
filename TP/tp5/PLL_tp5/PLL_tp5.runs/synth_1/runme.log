@@ -1,0 +1,255 @@
+
+*** Running vivado
+    with args -log pll_tp5.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pll_tp5.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source pll_tp5.tcl -notrace
+Command: synth_design -top pll_tp5 -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 15680
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1150.309 ; gain = 45.684
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'pll_tp5' [C:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/tp5_PLL.vhd:56]
+	Parameter cycle_led_max bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'led_driver' declared at 'C:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/led_driver.vhd:40' bound to instance 'led_driver_1' of component 'led_driver' [C:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/tp5_PLL.vhd:114]
+INFO: [Synth 8-638] synthesizing module 'led_driver' [C:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/led_driver.vhd:52]
+	Parameter counter_max bound to: 100000000 - type: integer 
+INFO: [Synth 8-3491] module 'counter_unit' declared at 'C:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/counter.vhd:6' bound to instance 'count' of component 'counter_unit' [C:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/led_driver.vhd:88]
+INFO: [Synth 8-638] synthesizing module 'counter_unit' [C:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/counter.vhd:18]
+	Parameter counter_max bound to: 100000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'counter_unit' (1#1) [C:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/counter.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'led_driver' (2#1) [C:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/led_driver.vhd:52]
+INFO: [Synth 8-3491] module 'led_driver' declared at 'C:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/led_driver.vhd:40' bound to instance 'led_driver_2' of component 'led_driver' [C:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/tp5_PLL.vhd:126]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/PLL_tp5.runs/synth_1/.Xil/Vivado-5116-DESKTOP-14NT2OL/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'pll' of component 'clk_wiz_0' [C:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/tp5_PLL.vhd:137]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/PLL_tp5.runs/synth_1/.Xil/Vivado-5116-DESKTOP-14NT2OL/realtime/clk_wiz_0_stub.vhdl:16]
+INFO: [Synth 8-256] done synthesizing module 'pll_tp5' (3#1) [C:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/tp5_PLL.vhd:56]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1204.242 ; gain = 99.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1204.242 ; gain = 99.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1204.242 ; gain = 99.617
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1204.242 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/PLL_tp5.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'pll'
+Finished Parsing XDC File [c:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/PLL_tp5.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'pll'
+Parsing XDC File [C:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/PLL_tp5.srcs/constrs_1/imports/projet/Cora-Z7-10-Master.xdc]
+Finished Parsing XDC File [C:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/PLL_tp5.srcs/constrs_1/imports/projet/Cora-Z7-10-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/PLL_tp5.srcs/constrs_1/imports/projet/Cora-Z7-10-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/pll_tp5_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/pll_tp5_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/PLL_tp5.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/PLL_tp5.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1312.051 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1312.051 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1312.051 ; gain = 207.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1312.051 ; gain = 207.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/PLL_tp5.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/PLL_tp5.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
+Applied set_property KEEP_HIERARCHY = SOFT for pll. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1312.051 ; gain = 207.426
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_color_reg' in module 'pll_tp5'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                     red |                               00 |                               00
+                    blue |                               01 |                               01
+                   green |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_color_reg' using encoding 'sequential' in module 'pll_tp5'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1312.051 ; gain = 207.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input    4 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 2     
+	   3 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1312.051 ; gain = 207.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1312.051 ; gain = 207.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1327.145 ; gain = 222.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1327.969 ; gain = 223.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 1334.746 ; gain = 230.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 1334.746 ; gain = 230.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 1334.746 ; gain = 230.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 1334.746 ; gain = 230.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 1334.746 ; gain = 230.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 1334.746 ; gain = 230.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |clk_wiz_0_bbox |     1|
+|2     |CARRY4         |    14|
+|3     |LUT1           |     1|
+|4     |LUT2           |    60|
+|5     |LUT3           |     8|
+|6     |LUT4           |    13|
+|7     |LUT5           |     4|
+|8     |LUT6           |    10|
+|9     |FDCE           |    71|
+|10    |FDRE           |     3|
+|11    |IBUF           |     1|
+|12    |OBUF           |     6|
++------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 1334.746 ; gain = 230.121
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 1334.746 ; gain = 122.312
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1334.746 ; gain = 230.121
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1346.789 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1346.789 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+28 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 1346.789 ; gain = 242.164
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Thomas/Documents/Travail/Formation/FPGA/TP/TP5/VIVADO/PLL_tp5/PLL_tp5.runs/synth_1/pll_tp5.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file pll_tp5_utilization_synth.rpt -pb pll_tp5_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jun  2 17:10:33 2023...
