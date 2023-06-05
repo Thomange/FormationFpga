@@ -38,12 +38,14 @@ use ieee.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity led_driver is
-    Port ( clk      : in STD_LOGIC;
-           resetn   : in STD_LOGIC;
-		   update	: in std_logic;
-           led_r    : out STD_LOGIC;
-           led_g    : out std_logic;
-           led_b    : out std_logic
+    Port ( clk      	: in STD_LOGIC;
+           resetn   	: in STD_LOGIC;
+           update		: in std_logic;
+           color_code   : in std_logic_vector(1 downto 0);
+           led_r   	 	: out STD_LOGIC;
+           led_g    	: out std_logic;
+           led_b    	: out std_logic;
+           end_cycle    : out std_logic
            );
 end led_driver;
 
@@ -60,75 +62,70 @@ architecture Behavioral of led_driver is
          );
     end component;
     
-
-    
+    -- fsm pour commander led allumée ou non
     type state is (idle, led_on);
     signal current_state        : state;
     signal next_state           : state; 
     
-  
-   
-    
-    signal update               : std_logic;
-    signal color_code           : std_logic_vector(1 downto 0);
+       
+    signal s_end_counter        : std_logic;    -- fsm : nombre de période calculé par le compteur, signal d'entrée
+    signal s_led_on             : std_logic;    -- fsm : signal de sortie qui indique que la led peut être allumé
+       
+
+     
+    signal color_code_mem       : std_logic_vector(1 downto 0);
     signal couleur              : std_logic_vector(2 downto 0);
     
-    -- signaux internes pour end_cycle
-    signal end_cycle            : std_logic := '0';
-    signal led_on_sync          : std_logic;
-    signal led_on_prev          : std_logic;
+    -- signaux pour détection de fin de cycle sur front montant
+    signal led_on_sync  : std_logic;
+    signal led_on_prev  : std_logic;
     
-    -- signaux pour FIFO
-    signal s_full               : std_logic := '0';
-    signal s_empty              : std_logic := '0';
-    
-    signal resetn               : std_logic := '1';         -- pour le test sur carte
-    
-    
-    
-   
+    --signal resetn               : std_logic := '0';
     
     begin
-    
     
     -- compteur 
     count: counter_unit
     generic map(
-        counter_max => 10
+        counter_max => 100000000
         )
     port map(
         clk => clk,
         resetn => resetn,
         end_counter => s_end_counter
         ); 
-  
-
-   
         
-    led : process(clk, resetn, update)
+        
+    led : process(clk, resetn)
     begin
     
         if (resetn = '1') then
             current_state       <= idle;
+           
+            led_on_sync         <= '0';
+            led_on_prev         <= '0';
+            color_code_mem      <= "00";
             
---            color_code          <= "00";
-             
-            s_bouton_previous   <= '0';
-            s_bouton_0          <= '0';
-            led_on_prev       <= '0';
-            led_on_sync       <= '0';
+			
             
         elsif(rising_edge(clk)) then
             current_state <= next_state;
-			if(update = '1') then
-				color_code_mem <= color_code;
-			else
-				color_code_mem <= color_code_mem;
-			end if;
+            
+            --gestion du code couleur
+            if(update = '1') then
+                color_code_mem <= color_code;
+            else
+                color_code_mem <= color_code_mem;
+            end if;
+            
+            -- registres pour end_cycle avec led_on
+            led_on_sync <= s_led_on;
+            led_on_prev <= led_on_sync;
             
         end if;
     end process led;
-      
+
+        
          ----------------------------------------------------------------------- 
        -- commande de clignotement et choix des couleurs des led
          -----------------------------------------------------------------------
@@ -144,9 +141,13 @@ architecture Behavioral of led_driver is
      led_g <= (couleur(1) and s_led_on);  
      led_b <= (couleur(0) and s_led_on);  
   
-            --------------------------------------------------------------
- 
-  
+    -- détection front descendant pour end_cycle
+    end_cycle <= (led_on_prev and (not(led_on_sync)));
+    
+    
+    -- signal resetn à 0 pour implémentation sur carte du code (pas assez de bouton)
+   -- resetn <= '0';   
+    
     
     
     
@@ -156,17 +157,17 @@ architecture Behavioral of led_driver is
     begin
         case current_state is
         
-            -- Ã©tat initial, led Ã©teinte
+            -- état initial, led éteinte
             when idle =>                            
                 s_led_on <= '0';
                 
-                if (s_end_counter = '1') then       -- passage Ã  l'Ã©tat suivant
+                if (s_end_counter = '1') then       -- passage à l'état suivant
                     next_state <= led_on;
                 else
                     next_state <= idle;
                 end if;
            
-           -- Ã©tat 1 : signal pour allumer la led
+           -- état 1 : signal pour allumer la led
             when led_on =>                          
                 s_led_on <= '1';
                 
@@ -179,6 +180,6 @@ architecture Behavioral of led_driver is
         end case;
     end process fsm;
     
-   
+    
 
 end Behavioral;
