@@ -50,13 +50,17 @@ architecture behavioral of counter_unit is
                  
 		end process;
 		
-		led : process(resetn,s_end_counter)
+		led : process(resetn,clk)
 		begin
             	-- changement de led à fin de compteur
             if (resetn = '1') then
                 s_led_out <= '0';
-            elsif (rising_edge(s_end_counter)) then
-                s_led_out <= not(s_led_out);
+            elsif (rising_edge(clk)) then
+                if (s_end_counter = '1') then
+                    s_led_out <= not(s_led_out);
+                else
+                    s_led_out <= s_led_out;
+                end if;
             end if;		
             
 		end process ;
